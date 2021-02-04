@@ -10,17 +10,18 @@ namespace GGSharpTask
     /// </summary>
     public class CoreTask : CoreSystemBase<CoreTaskSystemConfigData, ICoreSystemClientTask>, ICoreTask
     {
-        #region Variables
-
+        #region VARIABLES
+        
+        // Properties
         private readonly ICoreTick _coreTick;
         
         private readonly IPool _taskPool;
         private readonly IPool _timerPool;
         
-        #endregion Variables
+        #endregion VARIABLES
         
         
-        #region Construction
+        #region CONSTRUCTION
 
         public CoreTask(CoreTaskSystemConfigData data, ICoreSystemClientTask client) 
             : base(data, client)
@@ -32,10 +33,10 @@ namespace GGSharpTask
             _taskPool = new TaskPool(_coreTick);
         }
 
-        #endregion Construction
+        #endregion CONSTRUCTION
 
 
-        #region Tasks
+        #region TASKS
 
         TaskHandle ICoreTask.Task(Action<float> action, ITicksetInstance tickset)
         {
@@ -52,6 +53,6 @@ namespace GGSharpTask
             return new TimerHandle(_coreTick).Set(duration, countDown, tickset);
         }
 
-        #endregion Tasks
+        #endregion TASKS
     }
 }

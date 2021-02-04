@@ -1,9 +1,13 @@
 using System;
+using GGSharpData;
 using GGSharpTick;
 
 namespace GGSharpTask
 {
-    public interface ICoreTask
+    /// <summary>
+    /// Describes client-facing API for core task system
+    /// </summary>
+    public interface ICoreTask : ICoreSystem
     {
         #region Methods
 
