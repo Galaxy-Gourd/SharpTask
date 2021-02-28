@@ -4,6 +4,11 @@
   "displayName": "GG Sharp Task",
   "description": "C# tasking system.",
   "unity": "2019.4",
+  "dependencies": {
+    "com.galaxygourd.ggsharpdata": "1.0.0",
+    "com.galaxygourd.ggsharppool": "1.0.0",
+    "com.galaxygourd.ggsharptick": "1.0.0"
+  },
   "author": {
     "name": "Galaxy Gourd",
     "email": "mstephens.dev@gmail.com" 
